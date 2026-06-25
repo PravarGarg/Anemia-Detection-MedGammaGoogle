@@ -37,5 +37,8 @@ Creating new version of rare class images with slight variations - rotation, bri
 - Class Weights during the fine tuning stage with a 8x penalty for severe misclassification 
 8x penalty is imposed on the model for misclassifying a rare class - directly encodes the costly scenario in which a clinic mistreats or misdiagnoses a severe injury. 
 
+(ii) Corrupted Images issue
 
+- 96 PNG files are segmentation masks and therefore were flagged as corrupted by PIL .verify() ; No raw eye images (JPG form) are corrupted they are usable for training
+- Hence, only JPG files are considered for finetuning 
 
